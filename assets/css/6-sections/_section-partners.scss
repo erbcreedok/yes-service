@@ -1,0 +1,60 @@
+.section-partners {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  @include media-breakpoint-down(md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .select-for a {
+    text-decoration: none;
+    color: inherit;
+    &.active {
+      color: $secondary-color;
+      text-decoration: none !important;
+      cursor: default;
+    }
+  }
+  .partner-image {
+    width: 300px;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      width: 150px;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    @include media-breakpoint-down(md) {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+  }
+  p {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $black-default;
+    text-align: center;
+    @include media-breakpoint-down(md) {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+  }
+  .slider-arrow-abs {
+    &.slider-arrow-prev, &.slider-arrow-next {
+      top: 55px;
+      bottom: auto;
+      font-size: 1.6rem;
+      color: $blue;
+      font-weight: 500;
+      cursor: pointer;
+      @include  media-breakpoint-down(md) {
+        top: auto;
+        bottom: -40px;
+      }
+    }
+  }
+}

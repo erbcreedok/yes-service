@@ -1,0 +1,28 @@
+footer {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  border-top: 1px solid $whitegray-secondary;
+  color: rgba($white, .5);
+  a, a:hover {
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    color: inherit;
+    cursor: pointer;
+    transition: 0s;
+  }
+  a:hover {
+    opacity: .8;
+    transition: .2s;
+  }
+  hr{
+    height: 1px;
+    background: rgba(#BCC6D0,40px);
+    margin-bottom: 50px;
+  }
+  button {
+    margin-top: 70px;
+    @include media-breakpoint-down(md) {
+      margin-top: 50px;
+    }
+  }
+}

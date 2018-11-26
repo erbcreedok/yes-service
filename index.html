@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="QPoint – Чат бот, который способен рассылать контент, вести службу поддержки, стимулировать продажи, продвигать бизнес и это еще не все...">
+    <meta name="keywords" content="QPoint, Чат, Бот, Чат боты, CRM">
+    <meta name="author" content="Aidos Kurmashev, Yerbol Syzdyk">
+    <title>QPoint - Разработка, интеграция Чат ботов</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+
+  </head>
+
+  <body>
+    <input type="hidden" value="index" id="sitepage">
+    <nav class="navbar navbar-expand-md fixed-top">
+      <div class="container">
+       <a class="navbar-brand" href=".">
+           <img src="./assets/img/logo.svg" alt="">
+       </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="d-none d-md-inline-block mr-3"> Меню </span>
+         <span class="navbar-toggler-icon">
+             <span class="navbar-toggler-icon-line"></span>
+         </span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="mainNavbar">
+         <ul class="navbar-nav main-nav mx-auto justify-content-around">
+             <li class="nav-item">
+                 <a class="nav-link" href="#main">Главная</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#advantages">Преимущества</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#products">Что вы получите</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#reviews">Отзывы</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#platform">Платформа</a>
+             </li>
+         </ul>
+       </div>
+
+          <button class="btn btn-primary" data-toggle="modal" data-target="#callbackModal">
+              Оставить заявку
+          </button>
+      </div>
+    </nav>
+    <section id="main" class="first-section gradient-bg">
+        <div class="first-section-slides">
+            <section class="subsection d-flex align-items-center" style="background-image: url(assets/img/bg1.png)">
+                <div class="container">
+                    <h1 class="main-title">Разработка чат бота</h1>
+                    <div class="main-info">
+                        <p style="max-width: 530px">
+                            Замените 10 менеджеров 1 чат ботом, и отвечайте на вопросы пользователей 24/7
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap">
+                        <button class="btn mb-5 mb-md-0 mx-auto ml-md-0 mr-md-5" data-toggle="modal" data-target="#callbackModal" style="width: 190px">
+                            <span class="">Создать своего бота</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="subsection d-flex align-items-center" style="background-image: url(assets/img/bg2.png)">
+                <div class="container">
+                    <h1 class="main-title">Интеграция чат бота</h1>
+                    <div class="main-info">
+                        <p style="max-width: 530px">
+                            Интегрируйте все данные с мессенджеров под рукой для удобного использования
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap">
+                        <button class="btn mb-5 mb-md-0 mx-auto ml-md-0 mr-md-5" data-toggle="modal" data-target="#callbackModal" style="width: 190px">
+                            <span class="">Интегрировать все</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="subsection d-flex align-items-center" style="background-image: url(assets/img/bg3.png)">
+            <div class="container">
+                <h1 class="main-title">Чат бот для CRM</h1>
+                <div class="main-info">
+                    <p style="max-width: 450px">
+                        Используйте чат бот для уведомления о новых заказах и поступивших заявках
+                    </p>
+                </div>
+                <div class="d-flex align-items-center flex-wrap">
+                    <button class="btn mb-5 mb-md-0 mx-auto ml-md-0 mr-md-5" data-toggle="modal" data-target="#callbackModal" style="width: 190px">
+                        <span class="">Вести учет в CRM</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        </div>
+        <div class="container d-none d-md-block slider-nav">
+            <div class="row first-section-slider-nav">
+                <div class="col-md-4">
+                    <div class="slider-nav-item">
+                        <div class="text-block">
+                            <p class="bigger">
+                                Разработка чат бота
+                            </p>
+                            <p class="smaller">
+                                Замените 10 менеджеров 1 чат ботом
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slider-nav-item">
+                        <div class="text-block">
+                            <p class="bigger">
+                                Интеграция чат бота
+                            </p>
+                            <p class="smaller">
+                                Все данные с мессенджеров под рукой
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="slider-nav-item">
+                        <div class="text-block">
+                            <p class="bigger">
+                                Чат бот для CRM
+                            </p>
+                            <p class="smaller">
+                                Уведомление о новых заказах и многое другое
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-waypoint="main" class="pt-1"></section>
+    <section id="advantages" class="section-advantages">
+        <div class="container color-black-default">
+            <h2 class="section-heading text-center">
+                Chat Bot способен на разные вещи
+            </h2>
+            <p class="section-subheading text-center mx-auto" style="max-width: 810px">
+                Виртуальный помощник, заточенный под конкретную цель, умеет решать буквально любые задачи, доступные живому человеку.
+            </p>
+            <div class="row py-5 text-center text-md-left">
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/1.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">Рассылка контента</h4>
+                        <p class="advantage-description">
+                            Выполняет рассылку полезных материалов под конкретный сегмент целевой аудитории
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/2.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">Стимулирует продажи</h4>
+                        <p class="advantage-description">
+                            Рассказывает о новинках, предлагает акции, распродажи, делает специальные предложения
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/3.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">Служба поддержки</h4>
+                        <p class="advantage-description">
+                            Отвечает на вопросы пользователей, и знает ответы на самые часто задаваемые вопросы и при этом остаётся на связи 24/7
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/4.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">Продавец-консультант</h4>
+                        <p class="advantage-description">
+                            Помогает с выбором наиболее подходящего товара или услуги без необходимости приходить лично в магазин
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/5.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">To-Do manager</h4>
+                        <p class="advantage-description">
+                            Напоминает о регулярно повторяющихся действиях (купить цветы перед днем рождения мамы, или заказать чистую воду в офис)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 my-5">
+                    <div class="advantage-item">
+                        <div class="mb-5">
+                            <img src="./assets/img/6.svg" alt="" height="100px">
+                        </div>
+                        <h4 class="color-main mb-4">Продвижение бизнеса</h4>
+                        <p class="advantage-description">
+                            Вовлекает пользователей в более интенсивный диалог о продукте, стимулирует участвовать в маркетинговых активностях;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn-primary btn" data-toggle="modal" data-target="#callbackModal">
+                    Предложить свой вариант
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="section-products bg-main">
+        <div class="container color-black-default">
+            <h2 class="section-heading inversive text-center mx-auto">
+                Разрабатывая Chat Bot у нас вы получите:
+            </h2>
+            <p class="section-subheading inversive text-center mx-auto" style="width: 810px; margin-bottom: 50px">
+                Мы не только разрабатываем Chat Bot-ы, также помогаем бизнесу решать конкретные задачи. Увеличиваем прибыль. Автоматизируем бизнес.
+            </p>
+            <div class="pill-tabs-container" style="margin-bottom: 20px">
+                <ul class="pill-tabs" data-target="#product-tabs">
+                    <li class="pill active">
+                        Консультация
+                    </li>
+                    <li class="pill">
+                        Разработка
+                    </li>
+                    <li class="pill">
+                        Внедрение
+                    </li>
+                    <li class="pill">
+                        Поддержка
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-bodies" id="product-tabs">
+                <div class="row text-center">
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/1-1.svg" alt="" height="50px">
+                            </div>
+                            <p>Проанализируем ваш бизнес и коммуникации</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/1-2.svg" alt="" height="50px">
+                            </div>
+                            <p>Проконсультируем и предложим решения</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/1-3.svg" alt="" height="50px">
+                            </div>
+                            <p>Разработаем стратегию и обучим вашу команду</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center d-none">
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/2-1.svg" alt="" height="50px">
+                            </div>
+                            <p>Создадим чатботов с нуля для вашего бизнеса</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/2-2.svg" alt="" height="50px">
+                            </div>
+                            <p>Используем передовые решения наших разработчиков</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/2-3.svg" alt="" height="50px">
+                            </div>
+                            <p>Поможем сэкономть ваш бюджет и время</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center d-none">
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/3-1.svg" alt="" height="50px">
+                            </div>
+                            <p>Наладим работу готовых решений</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/3-2.svg" alt="" height="50px">
+                            </div>
+                            <p>Интегрируем все с системами и инструментами</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-item">
+                        <div class="product-item-content">
+                            <div class="mb-4">
+                                <img src="./assets/img/3-3.svg" alt="" height="50px">
+                            </div>
+                            <p>Оптимизируем их работу</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-center d-none">
+                <div class="col-md-4 product-item">
+                    <div class="product-item-content">
+                        <div class="mb-4">
+                            <img src="./assets/img/4-1.svg" alt="" height="50px">
+                        </div>
+                        <p>Защитим от нежданных ”сюрпризов"</p>
+                    </div>
+                </div>
+                <div class="col-md-4 product-item">
+                    <div class="product-item-content">
+                        <div class="mb-4">
+                            <img src="./assets/img/4-2.svg" alt="" height="50px">
+                        </div>
+                        <p>Адаптируем системы к новым потребностям</p>
+                    </div>
+                </div>
+                <div class="col-md-4 product-item">
+                    <div class="product-item-content">
+                        <div class="mb-4">
+                            <img src="./assets/img/3-3.svg" alt="" height="50px">
+                        </div>
+                        <p>Будем развивать функциональность решения и после его внедрения</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary" style="width: 230px" data-toggle="modal" data-target="#callbackModal">
+                    Отправить запрос
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="section-partners">
+        <div class="container color-black-default">
+            <h2 class="section-heading text-center">
+                Компании, которые сотрудничают с нами
+            </h2>
+            <div class="logo-list" style="margin-bottom: 80px">
+                <div>
+                    <div class="mx-auto partner-image">
+                        <img src="./assets/img/neupusti@2x.jpg" width="100%" alt="">
+                    </div>
+                    <h4 class="text-center">Образовательный портал “Neupusti.net”</h4>
+                    <p>
+                        Компания Qpoint оправдала ожидания: работы были проделаны качественно, своевременно, все зафиксированные ошибки в работе чат бота были в полном объёме задокументированы и проиллюстрированы, были предоставлены рекомендации по улучшению интерфейса чат бота. Считаем возможным рекомендовать компанию Qpoint как квалифицированную и компетентную в решении подобных задач.
+                    </p>
+                </div>
+                <div>
+                    <div class="mx-auto partner-image">
+                        <img src="./assets/img/neupusti@2x.jpg" width="100%" alt="">
+                    </div>
+                    <h4 class="text-center">Образовательный портал “Neupusti2.net”</h4>
+                    <p>
+                        Компания Qpoint оправдала ожидания: работы были проделаны качественно, своевременно, все зафиксированные ошибки в работе чат бота были в полном объёме задокументированы и проиллюстрированы, были предоставлены рекомендации по улучшению интерфейса чат бота. Считаем возможным рекомендовать компанию Qpoint как квалифицированную и компетентную в решении подобных задач.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-secondary" data-toggle="modal" data-target="#callbackModal">
+                    Посмотреть этот ChatBot
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="platform" class="section-platform">
+        <div class="container color-black-default">
+            <h2 class="text-center section-heading">
+                Технологии и платформы при разработке
+            </h2>
+            <p class="text-center section-subheading mx-auto" style="max-width: 810px">
+                Мы используем все надежные и проверенные технологии при разработке Chat Bot-а. Также, всегда следим за новыми и передовыми платформами.
+            </p>
+            <div class="div" style="overflow: auto">
+                <div class="d-none d-md-block">
+                    <img src="./assets/img/logos.jpg" height="341px" alt="">
+                </div>
+                <div class="d-block d-md-none">
+                    <img src="./assets/img/logos-sm.jpg" height="150px" alt="">
+                </div>
+            </div>
+            <div class="text-center my-5 py-5">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#callbackModal">
+                    Отрпавить запрос
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer pt-6 pb-5 bg-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 mb-5 text-md-left text-center">
+                    <a href="#" class="d-block mb-md-5">
+                        <img src="assets/img/logo.svg" height="30px">
+                    </a>
+                    <p class="mb-0">
+                        Все права защищены.<br/>
+                        ТОО “Qpoint”, 2016-2018
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mb-5 text-center text-md-left">
+                    <p class="mb-md-2">
+                        <a href="#main">Главная</a>
+                    </p>
+                    <p class="mb-md-2">
+                        <a href="#advantages">Преимущества</a>
+                    </p>
+                    <p class="mb-md-2">
+                        <a href="#products">Что вы получите</a>
+                    </p>
+                    <p class="mb-md-2">
+                        <a href="#reviews">Отзывы</a>
+                    </p>
+                    <p class="mb-md-2">
+                        <a href="#platform">Платформа</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mb-5 text-center text-md-left">
+                    <p class="mb-md-5">
+                        010001, Республика Казахстан,<br/>
+                        г. Алматы, ул. Байзакова, 280<br/>
+                        БЦ «Almaty Towers», SmArtPoint
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mb-5 text-center text-md-left">
+                    <p class="color-white">
+                        <a href="tel: +7 717 245-69-49">Телефон: +7 717 245-69-49</a>
+                    </p>
+                    <p class="color-white">
+                        <a href="mailto: info@qpoint.kz">E-mail: info@qpoint.kz</a>
+                    </p>
+                    <button class="btn" data-toggle="modal" data-target="#callbackModal">
+                        Отправить запрос
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog" aria-labelledby="callbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-form" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="modal-title" id="callbackModalLabel" style="font-size: 2.6rem">Отправьте нам заявку и мы свяжемся с вами</p>
+                    <button type="button" class="close modal-closer" style="font-size: 1.6rem;line-height: 4.6rem;" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <span class="icon-close"></span>
+                        </span>
+                    </button>
+                    <hr class="modal-hr">
+                    <form id="callbackForm" class="row">
+                        <div class="form-group col-md-6 mb-5">
+                            <label for="name">Имя: *</label>
+                            <input type="text" required name="name" id="name" class="form-control" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group col-md-6 mb-5">
+                            <label for="phone">Номер телефона: *</label>
+                            <input type="text" required name="phone" id="phone" class="form-control" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="form-group col-md-12 mb-20">
+                            <label for="extra">Дополнительно: </label>
+                            <textarea type="text" name="extra" id="extra" class="form-control" placeholder="Введите ваше сообщение"></textarea>
+                        </div>
+                        <p class="col-md-12 notifier" style="margin-bottom: 46px">
+                            * Внимание! Мы не передаем никаких данных 3-м лицам. Все конфиденциально.
+                        </p>
+                        <div class="col-md-12">
+                            <button class="btn btn-primary">
+                                <span class="ajax-status">Отправить</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dialog modal-thanks" style="display: none" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="h2 text-center font-weight-bold my-6">
+                        Большое спасибо! :D<br>
+                        Ваша заявка принята <span class="icon-checkmark"></span>
+                    </p>
+                    <p class="notifier text-right">
+                        <a href="#" data-dismiss="modal" class="color-gray">Закрыть</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- build:js -->
+    <script src="assets/js/main.js"></script>
+     <!-- endbuild -->
+  </body>
+
+</html>

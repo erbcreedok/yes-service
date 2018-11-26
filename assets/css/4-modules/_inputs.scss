@@ -1,0 +1,30 @@
+.form-group label {
+  font-size: 1.4rem;
+  color: $black-default;
+}
+.form-group .form-control {
+  padding: 11px 15px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  border-color: $whitegray-secondary;
+  background: $whitegray-lightest;
+  border-radius: 5px;
+  &::placeholder {
+    color: $lightgray-secondary;
+  }
+  &.disabled, &[disabled] {
+    background: $whitegray-default;
+    color: $lightgray-default;
+  }
+  &.no-valid {
+    border: 1px solid $red;
+  }
+}
+form .notifier {
+  font-size: 1.4rem;
+  color: $lightgray-secondary;
+}
+input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}

@@ -1,0 +1,7 @@
+.section-about {
+  .number-container {
+    @include media-breakpoint-up(md) {
+      max-width: 130px;
+    }
+  }
+}

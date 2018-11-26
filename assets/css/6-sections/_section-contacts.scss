@@ -1,0 +1,44 @@
+.section-contacts {
+  .map-container {
+    height: 516px;
+  }
+  #map {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 516px;
+  }
+  @include media-breakpoint-down(sm) {
+    .map-container, #map {
+      height: auto;
+    }
+    #map {
+      margin: 0 0 5rem;
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .box {
+    position: relative;
+    z-index:10;
+    max-width: 365px;
+    background-color: $white;
+    color: $black-default;
+    hr {
+      opacity: 0;
+      visibility: hidden;
+      margin: 5px 0;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 45px;
+      hr {
+        opacity: 1;
+        visibility: visible;
+        margin: 25.5px -45px;
+      }
+      box-shadow: 0 0 10px rgba($lightgray-default, .5);
+    }
+
+  }
+}

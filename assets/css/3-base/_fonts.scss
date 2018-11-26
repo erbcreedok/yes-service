@@ -1,0 +1,51 @@
+//Font - Regular (400)
+@font-face {
+  font-family: 'GTWalsheimPro';
+  src: local('GTWalsheimPro'), url($path-font-main + '/GTWalsheimPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//GTWalsheimPro - Bold (700)
+@font-face {
+  font-family: 'GTWalsheimPro';
+  src: local('GTWalsheimPro Bold'), url($path-font-main + '/GTWalsheimPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+//GTWalsheimPro - Medium (500)
+@font-face {
+  font-family: 'GTWalsheimPro';
+  src: local('GTWalsheimPro Medium'), url($path-font-main + '/GTWalsheimPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+//Roboto - Regular (400)
+@font-face {
+  font-family: 'Roboto';
+  src: url($path-fonts + '/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Roboto - Light (300)
+@font-face {
+  font-family: 'Roboto';
+  src: url($path-fonts + '/Roboto/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url($path-fonts + '/icomoon/icomoon.eot?1jcwml');
+  src:  url($path-fonts + '/icomoon/icomoon.eot?1jcwml#iefix') format('embedded-opentype'),
+  url($path-fonts + '/icomoon/icomoon.ttf?1jcwml') format('truetype'),
+  url($path-fonts + '/icomoon/icomoon.woff?1jcwml') format('woff'),
+  url($path-fonts + '/icomoon/icomoon.svg?1jcwml#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "../../fonts/icomoon/icomoon";

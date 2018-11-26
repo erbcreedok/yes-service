@@ -1,0 +1,148 @@
+.slider-arrow, .slider-button-left, .slider-button-right {
+  width:  30px;
+  height: 30px;
+  line-height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: transparent;
+  color: $white;
+  border: 1px solid $white;
+  cursor: pointer;
+  margin: 0 1rem;
+  &.slider-arrow-blue {
+    background-color: $main-color;
+    border-color: $main-color;
+    &:hover {
+      background-color: $main-color - #222;
+      border-color: $main-color - #222;
+    }
+  }
+  &.slider-arrow-green {
+    background-color: transparent;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    &:hover {
+      background-color: $secondary-color;
+      color: $white;
+    }
+  }
+  span {
+    display: inline-block;
+  }
+  &:hover {
+    border-color: $secondary-color;
+    background: $secondary-color;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.slider-button-right {
+  margin-right: -2px;
+}
+.slider-button-right {
+  margin-left: -2px;
+}
+.slider-buttons {
+  .slider-button-left, .slider-button-right, .slider-numbers {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+}
+.slider-content {
+  position: relative;
+}
+.slider-element {
+  $duration: 150ms;
+  $delay: 100ms;
+  position: absolute;
+  opacity: 0;
+  top:0;
+  left:0;
+  z-index:1;
+  &.active {
+    position: relative;
+    opacity: 1;
+    z-index:2;
+  }
+  &.next {
+    position: relative;
+    pointer-events: none;
+    z-index: 3;
+    transform: translateX(100px);
+    opacity: 0;
+    animation: fadein-right $duration $delay ease-in forwards;
+    &.reverse {
+      transform: translateX(-100px);
+      animation: fadein-left $duration $delay ease-in forwards;
+    }
+  }
+  &.prev {
+    pointer-events: none;
+    position: absolute;
+    opacity: 1;
+    z-index:2;
+    animation: fadeout-left $duration ease-out forwards;
+    &.reverse {
+      animation: fadeout-right $duration ease-out forwards;
+    }
+  }
+}
+
+.slick-slide {
+  outline: none !important;
+}
+.slider-arrow-abs {
+  &.slider-arrow-prev, &.slider-arrow-next {
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin: auto 0;
+    z-index:10;
+  }
+  &.slider-arrow-prev {
+    left: 10px;
+  }
+  &.slider-arrow-next {
+    right: 10px;
+  }
+
+}
+
+.slick-dots {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  li.slick-active {
+    button {
+      border-color: $white;
+    }
+  }
+  button {
+    appearance: none;
+    font-size: 0;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0s;
+    &:hover {
+      border-color: rgba($white, .5);
+      transition: .2s;
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 6px;
+      width: 6px;
+      background: $white;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+.navbar {
+  min-height: 60px;
+  font-size: 1.4rem;
+  padding: 0;
+  transition: background 150ms ease-in, padding 150ms 150ms;
+  background: rgba($blue-low,.05);
+  border-bottom: 1px solid rgba($blue-low, .2);
+}
+.navbar-brand {
+  img {
+    height: 18px;
+  }
+  span {
+    color: $white;
+    transition: color 150ms;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+.navbar-toggler {
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  line-height: 60px;
+  order: 1;
+  padding: 0;
+}
+.navbar-collapse {
+  order: 1;
+}
+.navbar-toggler-icon {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  $animation-time: 150ms;
+  @mixin normal() {
+    transform-origin: center;
+    transition: 150ms;
+    .navbar-toggler-icon-line, &:after, &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 1px;
+      background: $white;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: $animation-time;
+    }
+    &:before{
+      margin-top: 2px;
+      transition: $animation-time;
+    }
+    &:after{
+      margin-bottom: 2px;
+      transition: $animation-time;
+    }
+  }
+  @mixin expanded() {
+    transform: rotate(45deg);
+    &:before {
+      transform: translateY(5px) rotate(180deg);
+    }
+    .navbar-toggler-icon-line {
+      transform: rotate(90deg) translateX(-2px);
+    }
+    &:after {
+      opacity: 0;
+    }
+
+  }
+
+  @include normal();
+  .navbar-toggler[aria-expanded=true] & {
+    @include expanded();
+  }
+}
+.nav-link, .nav-link:hover, .nav-item-subtitle {
+  color: $white;
+  transition: color 150ms;
+}
+.navbar > .container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.phone-nav .phone-link {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.phone-nav .nav-item-subtitle {
+  position: absolute;
+  margin-bottom: 0;
+  padding: 0 0.25rem;
+}
+@mixin underline($color) {
+  &:after {
+    width: 100%;
+    background: $color;
+    margin-top: 0;
+  }
+}
+@mixin leftline($color) {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    background: $color;
+  }
+}
+@mixin filled-navbar() {
+  background: $blue;
+  border-bottom: 1px solid $blue - #321;
+  padding: 0;
+  color: $white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  .navbar-brand span, .nav-link, .nav-link:hover, .nav-item-subtitle {
+    color: $white;
+  }
+  .phone-nav .nav-item-subtitle {
+    position: static;
+    padding: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    background: $blue;
+    color: $white;
+    .navbar-brand span{
+      color: $white;
+    }
+    .nav-link, .nav-link:hover {
+      color: $white;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    .main-nav .nav-item .nav-link{
+      color: $blue-low;
+    }
+    .main-nav .nav-item.active .nav-link {
+      color: $white;
+    }
+    .main-nav .nav-item.active{
+      @include underline($white);
+    }
+  }
+}
+
+.navbar-filled {
+  @include filled-navbar;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    @include filled-navbar;
+  }
+  .nav-item {
+    padding: 10px 0 10px 10px;
+    &.active {
+      @include leftline($white);
+    }
+  }
+}
+@include media-breakpoint-up(md){
+  .main-nav .nav-item {
+    position: relative;
+    transition: opacity 150ms;
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      transition: width 200ms;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    &.active{
+      @include underline($white);
+    }
+  }
+  .nav-item {
+    padding: 0 5px;
+  }
+  .navbar-collapse, .navbar-toggler {
+    order: 0;
+  }
+  .navbar-expand-md .navbar-nav .nav-link {
+    line-height: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-brand img {
+    height: 30px;
+  }
+}
+@include media-breakpoint-only(md) {
+  .main-nav .nav-item {
+    font-size: 1.2rem;
+    padding: 0 0.2rem;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .nav-item {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,64 @@
+.btn {
+  border-radius: 40px;
+  min-height: 40px;
+  min-width: 165px;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: $blue;
+  background: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  &.btn-primary {
+    background: linear-gradient(266deg, $green, $green-secondary);;
+    border-color: transparent;
+    color: $white;
+    &:not(:disabled):not(.disabled):focus,
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):focus:active,
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).hover
+    {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+  &.btn-secondary {
+    background: $blue;
+    border-color: transparent;
+    color: $white;
+    font-weight: 400;
+    &:not(:disabled):not(.disabled):focus,
+    &:not(:disabled):not(.disabled).focus,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    &:not(:disabled):not(.disabled):focus:active,
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).hover
+    {
+      box-shadow: none;
+      border-color: transparent;
+    }
+  }
+  &.btn-primary:not(:disabled):not(.disabled):active, &.btn-primary:not(:disabled):not(.disabled).active, & .show > .btn-primary.dropdown-toggle {
+    background: linear-gradient(266deg, $green - #111, $green-secondary - #111);
+  }
+  &.btn-secondary:not(:disabled):not(.disabled):active, &.btn-secondary:not(:disabled):not(.disabled).active, & .show > .btn-secondary.dropdown-toggle {
+    background-color: $primary - #040404;
+    border-color: $primary - #040404;
+  }
+}
+.btn:focus, .btn.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($main-color, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba($main-color, 0.25);
+}
+.btn-primary:focus, .btn-primary.focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($main-color, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba($main-color, 0.5);
+}
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($white, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba($white, 0.5);
+}
