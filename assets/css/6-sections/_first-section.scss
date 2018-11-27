@@ -1,110 +1,68 @@
 .first-section {
-  color: $white;
-  .subsection {
-    min-height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position: top right;
-    @include media-breakpoint-down(md) {
-      background-size: 340px auto;
-      padding-top: 220px;
-      padding-bottom: 50px;
-      background-position: top right -40px;
-    }
-  }
-  .main-title {
-    font-size: 6.4rem;
-    height: 64px;
-    margin-bottom: 30px;
-    @include media-breakpoint-down(md) {
-      font-size: 3.6rem;
-      height: auto;
-      line-height: 46.8px;
-      min-height: 86px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-  }
-  .main-info {
-    max-width: 530px;
-    font-family: 'Roboto', sans-serif;
-    min-height: 79px;
-    margin-bottom: 70px;
-    font-weight: 300;
-    font-size: 2.4rem;
-    line-height: 3.6rem;
-    @include media-breakpoint-down(md) {
-      text-align: center;
-      font-size: 1.6rem;
-      margin-bottom: 21px;
-    }
-  }
-  .digit-container {
-    padding: 10px 10px 50px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    .digit {
-      color: $secondary-color;
-      font-size: 3.6rem;
-    }
-  }
-  .slick-dots {
-    position: absolute;
-    right: 50px;
-    bottom: 100px;
-    @include media-breakpoint-down(md) {
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      text-align: center;
-      li {
-        display: inline-block;
-      }
-    };
-  }
-  .slider-nav {
-    .slider-nav-item {
-      border-top: 1px solid rgba($blue-low, .5);
-    }
-    .text-block {
-      &:before {
-        content: '';
-        display: inline-block;
-        height: 1px;
-        background: white;
-        position: absolute;
-        left: 0;
-        right: 100%;
-        transition: .2s;
-        top: -1px;
-        box-shadow: 0 0 rgba(0, 0, 0, 0);
-      }
+  color: #2b2b2b;
+  padding: 50px 0 45px;
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      line-height: 2rem;
+      padding-left: 40px;
       position: relative;
-      width: 80%;
-      color: $blue-low;
-      padding: 23px 0 40px;
-      .bigger {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+        display: inline-block;
+        margin-right: 15px;
+        color: $orange;
+        font-size: 2rem;
+        text-align: center;
       }
-      .smaller {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+      p {
+        font-size: 2.4rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0;
       }
+      margin-bottom: 30px;
     }
-    .slider-nav-item.active {
-      .text-block {
-        &:before {
-          right: 0;
-          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-        }
-        .bigger {
-          color: white;
-        }
-      }
+  }
+  h2 {
+    text-shadow: 0 1px 2px rgba(0,0,0,.35);
+    font-size: 3.6rem;
+    margin-bottom: 59px
+  }
+  h3 {
+    font-size: 2.8rem;
+    margin-bottom: 50px
+  }
+  h4 {
+    font-size: 2.2rem;
+    margin-bottom: 42px
+  }
+}
+@include media-breakpoint-down(md) {
+  .first-section {
+    padding: 25px 0;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .features-list li p {
+      font-size: 1.4rem;
+    }
+    .box {
+      padding: 15px 10px;
     }
   }
 }
