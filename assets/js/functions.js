@@ -1,5 +1,13 @@
 $(document).ready(function () {
     $('input[name="phone"]').inputmask("+9 (999) 999 99 99");
+    var logoRef = $('.navbar-brand img');
+    var srcs = ['./assets/img/logo.png', './assets/img/logo_ru.png'];
+    var srci = 0;
+    setInterval(function() {
+        srci+=1;
+        srci%=2;
+        logoRef.attr('src', srcs[srci]);
+    }, 3000);
 
     $('.callbackForm, #callbackForm').submit(function(e) {
         e.preventDefault();
